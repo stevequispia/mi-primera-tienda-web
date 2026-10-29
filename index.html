@@ -2,275 +2,349 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Orquídea Boutique · Ropa y accesorios para mujer</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap">
+<meta name="description" content="Orquídea Boutique: ropa y accesorios para mujer. Elige talla y color, arma tu carrito y haz tu pedido por WhatsApp. Tienda de demostración.">
+<meta property="og:title" content="Orquídea Boutique · Ropa y accesorios para mujer">
+<meta property="og:description" content="Colección de ropa y accesorios con pedido directo por WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#a24d86">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23a24d86'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white'%3E✿%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f1f7;--surface:#fff;--ink:#241530;--muted:#6c5d77;--accent:#a3286b;--on:#fff;--line:#e4d8ea;--serif:'Bodoni Moda',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#170f1c;--surface:#221729;--ink:#f5ecf8;--muted:#b9a7c4;--accent:#e58ab8;--on:#1c0f17;--line:#382a42;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#170f1c;--surface:#221729;--ink:#f5ecf8;--muted:#b9a7c4;--accent:#e58ab8;--on:#1c0f17;--line:#382a42;color-scheme:dark}
+:root{--crema:#f7f1e8;--calido:#fffdf9;--negro:#2a2528;--gris:#6b6266;--acento:#a24d86;--acento-o:#823a6a;--linea:#e6dccf;--r:14px;--sombra:0 8px 28px rgba(42,37,40,.10);--s:clamp(1rem,4vw,2rem)}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--crema);color:var(--negro);line-height:1.6}
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:500;line-height:1.15}
+img,svg{max-width:100%;display:block}
 a{color:inherit}
-button{font:inherit;cursor:pointer}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 5%}
-.logo{font:600 1.35rem var(--serif);text-decoration:none}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{text-decoration:none;color:var(--muted);font-size:.95rem}
-nav a:hover{color:var(--accent)}
-.cartbtn{border:1px solid var(--accent);background:none;color:var(--accent);border-radius:999px;padding:7px 16px;font-weight:500}
-.cartbtn b{background:var(--accent);color:var(--on);border-radius:999px;padding:1px 8px;margin-left:6px;font-size:.85rem}
-section{padding:64px 5%;max-width:1200px;margin:0 auto}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px}
-.lead{color:var(--muted);max-width:56ch;margin-bottom:28px}
-.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding-top:48px}
-.hero h1{font-size:clamp(2.4rem,6.5vw,4.6rem);margin-bottom:16px}
-.hero p{color:var(--muted);max-width:44ch;margin-bottom:24px}
-.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.mosaic .pic{border-radius:120px 120px 16px 16px}
-.mosaic .pic:nth-child(2){border-radius:16px 16px 120px 120px;margin-top:28px}
-.mosaic .pic:nth-child(3){margin-top:-28px;border-radius:16px 120px 16px 120px}
-.btn{background:var(--accent);color:var(--on);border:1px solid var(--accent);border-radius:8px;padding:10px 18px;font-weight:500;text-decoration:none;display:inline-block}
-.btn.ghost{background:none;color:var(--accent)}
-.chips{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
-.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 16px}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
-.pic{aspect-ratio:1;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 24%,var(--surface))}
-.pic svg{width:58%;height:58%}
-.body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
-.body h3{font-size:1.25rem}
-.d{color:var(--muted);font-size:.93rem}
-.opt{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.9rem}
-.sw{display:flex;gap:7px}
-.sw button{width:26px;height:26px;border-radius:50%;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
-.sw button.on{box-shadow:0 0 0 2px var(--accent)}
-select,input,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
-.opt select{width:auto}
-.price{font:600 1.4rem var(--serif);margin-top:auto}
-.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.btns .btn{padding:9px 8px;font-size:.88rem;text-align:center}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.vals{display:grid;gap:14px}
-.vals div{border-left:3px solid var(--accent);padding-left:14px}
-details{border-bottom:1px solid var(--line);padding:14px 0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+.wrap{width:min(1120px,100% - 2*var(--s));margin-inline:auto}
+section{padding-block:clamp(3rem,8vw,5.5rem)}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:.5rem}
+.sub{color:var(--gris);margin-bottom:2rem;max-width:56ch}
+.btn{display:inline-block;border:1.5px solid var(--negro);background:var(--negro);color:var(--calido);padding:.75rem 1.4rem;border-radius:999px;text-decoration:none;cursor:pointer;font-weight:500;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--acento);border-color:var(--acento)}
+.btn.sec{background:transparent;color:var(--negro)}
+.btn.sec:hover{background:var(--negro);color:var(--calido);border-color:var(--negro)}
+.btn.sm{padding:.5rem 1rem;font-size:.9rem}
+.sr{position:absolute;left:-9999px}
+/* Navegación */
+header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.logo{font-family:'Bodoni Moda',serif;font-size:1.3rem;text-decoration:none;color:var(--acento-o)}
+.menu{display:flex;gap:1.4rem;align-items:center}
+.menu a{text-decoration:none;font-size:.95rem}
+.menu a:hover{color:var(--acento)}
+.iconbtn{background:none;border:1.5px solid var(--linea);border-radius:999px;padding:.4rem .9rem;cursor:pointer}
+.iconbtn b{background:var(--acento);color:#fff;border-radius:999px;padding:0 .5rem;margin-left:.3rem;font-size:.85rem}
+#burger{display:none}
+@media(max-width:780px){#burger{display:block}.menu{position:absolute;top:64px;left:0;right:0;background:var(--calido);flex-direction:column;align-items:flex-start;padding:1rem var(--s);border-bottom:1px solid var(--linea);display:none}.menu.open{display:flex}}
+/* Portada */
+.hero{padding-block:clamp(2.5rem,7vw,5rem)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);margin-bottom:1rem}
+.hero p{color:var(--gris);max-width:46ch;margin-bottom:1.6rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.heroart{background:linear-gradient(160deg,#ecd3e4,#f4e3d3);border-radius:200px 200px var(--r) var(--r);aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden}
+.heroart svg{width:70%}
+@media(max-width:780px){.hero .wrap{grid-template-columns:1fr}.heroart{order:-1;max-height:300px;aspect-ratio:auto;height:280px}}
+/* Categorías */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.cat{background:var(--calido);border:1px solid var(--linea);border-radius:var(--r);padding:1.4rem 1rem;text-align:left;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.cat:hover{border-color:var(--acento);box-shadow:var(--sombra)}
+.cat strong{font-family:'Bodoni Moda',serif;font-size:1.25rem;font-weight:500;display:block}
+.cat span{color:var(--gris);font-size:.9rem}
+@media(max-width:700px){.cats{grid-template-columns:1fr 1fr}}
+/* Catálogo */
+.tools{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1rem}
+.tools input,.tools select{background:var(--calido);border:1px solid var(--linea);border-radius:999px;padding:.6rem 1rem}
+.tools input{flex:1 1 220px}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.chip{background:transparent;border:1px solid var(--linea);border-radius:999px;padding:.35rem 1rem;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--negro);color:var(--calido);border-color:var(--negro)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.3rem}
+.card{background:var(--calido);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card .pic{position:relative;cursor:pointer;border:0;padding:0;background:none;display:block;width:100%}
+.card .pic svg{width:100%;aspect-ratio:1;transition:transform .3s}
+.card .pic:hover svg{transform:scale(1.03)}
+.tag{position:absolute;top:.6rem;left:.6rem;background:var(--acento);color:#fff;font-size:.78rem;padding:.1rem .6rem;border-radius:999px}
+.card .info{padding:.9rem 1rem 1.1rem;display:flex;flex-direction:column;gap:.25rem;flex:1}
+.card h3{font-size:1.1rem}
+.card .cat-l{color:var(--gris);font-size:.85rem}
+.price{font-weight:700;margin-block:.2rem .5rem}
+.card .row{display:flex;gap:.5rem;margin-top:auto;flex-wrap:wrap}
+.empty{grid-column:1/-1;text-align:center;padding:2.5rem 1rem;border:1px dashed var(--linea);border-radius:var(--r);color:var(--gris)}
+/* Nosotros, beneficios */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.ben{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:2rem}
+.ben div{border-left:3px solid var(--acento);padding-left:1rem}
+.ben h3{font-size:1.1rem;margin-bottom:.2rem}
+.ben p{color:var(--gris);font-size:.95rem}
+@media(max-width:700px){.about{grid-template-columns:1fr}}
+/* FAQ */
+details{background:var(--calido);border:1px solid var(--linea);border-radius:var(--r);padding:1rem 1.2rem;margin-bottom:.7rem}
 summary{cursor:pointer;font-weight:500}
-details p{color:var(--muted);margin-top:8px;max-width:64ch}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:grid;gap:10px;align-content:start}
-.panel label{display:grid;gap:4px;font-size:.9rem}
-footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);padding:26px 5%;font-size:.9rem}
-.ov{position:fixed;inset:0;background:rgba(20,8,26,.5);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
-.ov.open{opacity:1;pointer-events:auto}
-aside{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--bg);z-index:50;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding:calc(16px + env(safe-area-inset-top,0px)) 20px calc(16px + env(safe-area-inset-bottom,0px));overflow-y:auto}
-aside.open{transform:none}
-.ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.line{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem}
-.line .pic{border-radius:8px}.line .pic svg{width:70%;height:70%}
-.qty{display:flex;align-items:center;gap:8px;margin-top:4px}
-.qty button{width:26px;height:26px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
-.x{background:none;border:0;color:var(--muted);font-size:.8rem;text-decoration:underline}
-.total{display:flex;justify-content:space-between;font:600 1.3rem var(--serif);padding:14px 0}
-.form{display:grid;gap:10px}
-.form label{display:grid;gap:4px;font-size:.9rem}
-.modes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.modes label{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:9px;background:var(--surface)}
-.modes input{width:auto}
-.err{color:#c0305a;font-size:.88rem;min-height:1.2em}
-.done{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:16px;white-space:pre-wrap;font-size:.9rem}
-.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;opacity:0;transition:.25s;z-index:60;pointer-events:none}
-.toast.on{opacity:1;transform:translate(-50%,0)}
-[hidden]{display:none!important}
-@media (max-width:760px){.hero,.about,.contact{grid-template-columns:1fr}nav{display:none}section{padding:44px 5%}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+details p{margin-top:.6rem;color:var(--gris)}
+/* Contacto */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.contact dl{display:grid;gap:.8rem}
+.contact dt{font-weight:700}
+.contact dd{color:var(--gris)}
+form label{display:block;font-size:.9rem;margin-bottom:.9rem}
+form input,form textarea,form select{width:100%;margin-top:.25rem;background:var(--calido);border:1px solid var(--linea);border-radius:10px;padding:.6rem .8rem}
+@media(max-width:700px){.contact{grid-template-columns:1fr}}
+footer{background:var(--negro);color:#d9d0d3;padding-block:2.5rem;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between}
+footer a{text-decoration:none;margin-right:1rem}
+footer a:hover{text-decoration:underline}
+/* Modal producto */
+dialog{border:0;border-radius:var(--r);padding:0;width:min(760px,94vw);background:var(--calido);color:var(--negro)}
+dialog::backdrop{background:rgba(42,37,40,.55)}
+.pd{display:grid;grid-template-columns:1fr 1fr}
+.pd .body{padding:1.5rem;display:flex;flex-direction:column;gap:.8rem}
+.pd .x{align-self:flex-end}
+.opts{display:flex;gap:.5rem;flex-wrap:wrap}
+.opt{border:1px solid var(--linea);background:transparent;border-radius:999px;padding:.3rem .9rem;cursor:pointer}
+.opt[aria-pressed=true]{border-color:var(--acento);background:var(--acento);color:#fff}
+.qty{display:inline-flex;align-items:center;gap:.6rem}
+.qty button{width:34px;height:34px;border-radius:50%;border:1px solid var(--linea);background:var(--calido);cursor:pointer;font-size:1.1rem}
+@media(max-width:640px){.pd{grid-template-columns:1fr}.pd svg{max-height:260px;width:100%}}
+/* Carrito */
+#ov{position:fixed;inset:0;background:rgba(42,37,40,.5);z-index:30;opacity:0;pointer-events:none;transition:opacity .25s}
+#ov.on{opacity:1;pointer-events:auto}
+aside{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--calido);z-index:31;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;visibility:hidden}
+aside.on{transform:none;visibility:visible}
+.ch{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--linea)}
+.cb{flex:1;overflow:auto;padding:1rem 1.2rem}
+.ci{display:grid;grid-template-columns:56px 1fr auto;gap:.8rem;align-items:center;padding-block:.7rem;border-bottom:1px solid var(--linea)}
+.ci svg{border-radius:8px;width:56px;height:56px}
+.ci small{color:var(--gris)}
+.cf{padding:1rem 1.2rem;border-top:1px solid var(--linea);background:var(--crema)}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:1.15rem;margin-bottom:.8rem}
+.rm{background:none;border:0;color:var(--acento-o);cursor:pointer;text-decoration:underline;font-size:.85rem}
+#toast{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,40px);background:var(--negro);color:#fff;padding:.7rem 1.2rem;border-radius:999px;z-index:40;opacity:0;transition:.3s;pointer-events:none}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <header>
-<a class="logo" href="#inicio">Orquídea Boutique</a>
-<nav><a href="#productos">Productos</a><a href="#nosotros">Sobre nosotros</a><a href="#preguntas">Preguntas frecuentes</a><a href="#contacto">Contacto y ubicación</a></nav>
-<button class="cartbtn" id="open">Carrito<b id="count">0</b></button>
+ <div class="wrap nav">
+  <a class="logo" href="#inicio">✿ Orquídea Boutique</a>
+  <button id="burger" class="iconbtn" aria-expanded="false" aria-controls="menu">Menú</button>
+  <nav class="menu" id="menu" aria-label="Principal">
+   <a href="#inicio">Inicio</a><a href="#coleccion">Colección</a><a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas frecuentes</a><a href="#contacto">Contacto</a>
+   <button class="iconbtn" id="openCart" aria-label="Abrir carrito">Carrito <b id="count">0</b></button>
+  </nav>
+ </div>
 </header>
-
+<main>
 <section class="hero" id="inicio">
-<div>
-<h1>Ropa y accesorios para mujer</h1>
-<p>Vestidos, blusas, pantalones, bolsos y joyería. Elige tu color, agrega al carrito y compra o reserva para recoger en la tienda.</p>
-<a class="btn" href="#productos">Ver productos</a>
-</div>
-<div class="mosaic" id="mosaic" aria-hidden="true"></div>
+ <div class="wrap">
+  <div>
+   <h1>Ropa y accesorios para sentirte tú</h1>
+   <p>Prendas y detalles elegidos para el día a día: cómodos, fáciles de combinar y con atención personal por WhatsApp.</p>
+   <div class="cta"><a class="btn" href="#coleccion">Explorar colección</a><a class="btn sec" id="waHero" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a></div>
+  </div>
+  <div class="heroart" aria-hidden="true"><svg viewBox="0 0 200 200" fill="none"><g transform="translate(100 100)"><g fill="#a24d86" opacity=".85"><ellipse rx="22" ry="52" transform="rotate(0) translate(0 -38)"/><ellipse rx="22" ry="52" transform="rotate(72) translate(0 -38)"/><ellipse rx="22" ry="52" transform="rotate(144) translate(0 -38)"/><ellipse rx="22" ry="52" transform="rotate(216) translate(0 -38)"/><ellipse rx="22" ry="52" transform="rotate(288) translate(0 -38)"/></g><circle r="16" fill="#f4d58a"/></g></svg></div>
+ </div>
 </section>
 
-<section id="productos">
-<h2>Productos</h2>
-<p class="lead">Escoge el color y la talla de cada artículo antes de agregarlo.</p>
-<div class="chips" id="chips">
-<button class="chip" data-f="Todo" aria-pressed="true">Todo</button>
-<button class="chip" data-f="Ropa" aria-pressed="false">Ropa</button>
-<button class="chip" data-f="Accesorios" aria-pressed="false">Accesorios</button>
-</div>
-<div class="grid" id="grid"></div>
+<section style="padding-top:0">
+ <div class="wrap"><div class="cats" id="cats"></div></div>
 </section>
 
-<section id="nosotros" class="about">
-<div>
-<h2>Sobre nosotros</h2>
-<p class="lead">Somos una tienda pequeña de moda femenina. Elegimos cada prenda y cada accesorio pensando en que te sientas cómoda y te guste cómo te ves, todos los días.</p>
-<p class="lead">Atendemos en tienda y por pedido. Si algo no te queda, lo cambiamos.</p>
-</div>
-<div class="vals">
-<div><h3>Tallas variadas</h3><p class="d">De la S a la XL en toda la ropa.</p></div>
-<div><h3>Colores a tu gusto</h3><p class="d">Cada artículo viene en varios colores.</p></div>
-<div><h3>Reserva sin pagar ahora</h3><p class="d">Aparta tu pedido y paga al recogerlo.</p></div>
-</div>
+<section id="coleccion">
+ <div class="wrap">
+  <h2>Colección</h2>
+  <p class="sub">Productos y precios de demostración. Elige talla y color antes de añadir al carrito.</p>
+  <div class="tools">
+   <label class="sr" for="q">Buscar producto</label>
+   <input id="q" type="search" placeholder="Buscar por nombre">
+   <label class="sr" for="sort">Ordenar</label>
+   <select id="sort"><option value="">Orden original</option><option value="asc">Precio: menor a mayor</option><option value="desc">Precio: mayor a menor</option></select>
+   <button class="btn sec sm" id="clear">Limpiar filtros</button>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+  <p class="sr" id="live" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+ </div>
+</section>
+
+<section id="nosotros" style="background:var(--calido)">
+ <div class="wrap">
+  <div class="about">
+   <div><h2>Sobre nosotros</h2></div>
+   <p>Somos una boutique de moda femenina. Elegimos cada prenda y cada accesorio pensando en que te sientas cómoda y te guste cómo te ves. <em>(Texto de demostración: personalízalo con la historia real de la tienda.)</em></p>
+  </div>
+  <div class="ben">
+   <div><h3>Atención personalizada</h3><p>Te acompañamos a elegir lo que mejor va contigo.</p></div>
+   <div><h3>Consulta directa</h3><p>Escríbenos por WhatsApp antes de decidir.</p></div>
+   <div><h3>Información clara</h3><p>Cada producto muestra su precio, tallas y colores.</p></div>
+   <div><h3>Ayuda con tu talla</h3><p>Envíanos tus medidas y te orientamos.</p></div>
+  </div>
+ </div>
 </section>
 
 <section id="preguntas">
-<h2>Preguntas frecuentes</h2>
-<details><summary>¿Cómo hago una compra?</summary><p>Agrega los artículos al carrito, elige “Comprar” y completa tus datos. Te contactamos por WhatsApp para coordinar el pago y la entrega.</p></details>
-<details><summary>¿Cómo funciona la reserva?</summary><p>En el carrito elige “Reservar”, indica la fecha en que pasarás por la tienda y guardamos tus artículos. Pagas al recogerlos.</p></details>
-<details><summary>¿Puedo cambiar una prenda?</summary><p>Sí. Tienes 7 días para cambiarla por otra talla o color, con la etiqueta puesta y sin uso.</p></details>
-<details><summary>¿Cómo elijo mi talla?</summary><p>Escríbenos por WhatsApp con tus medidas y te recomendamos la talla ideal.</p></details>
-<details><summary>¿Qué formas de pago aceptan?</summary><p>Efectivo, transferencia y pago con QR. Te enviamos los datos al confirmar tu pedido.</p></details>
+ <div class="wrap" style="max-width:780px">
+  <h2>Preguntas frecuentes</h2>
+  <p class="sub">Respuestas de ejemplo; edítalas cuando definas tus políticas.</p>
+  <div id="faq"></div>
+ </div>
 </section>
 
-<section id="contacto" class="contact">
-<div>
-<h2>Contacto y ubicación</h2>
-<p class="lead">Visítanos o escríbenos. Respondemos en el día.</p>
-<div class="panel">
-<p><b>Dirección:</b> Calle 27 de mayo, CBBA</p>
-<p><b>Horario:</b> Lunes a sábado, 10:00 a 20:00</p>
-<p><b>Teléfono / WhatsApp:</b> +591 754 555 62</p>
-<p><b>Correo:</b> hola@orquideaboutique.com</p>
-<a class="btn ghost" id="maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Calle+Ejemplo+123">Ver en Google Maps</a>
-</div>
-</div>
-<div class="panel">
-<h3>Envíanos un mensaje</h3>
-<label>Nombre<input id="cn" autocomplete="name"></label>
-<label>Mensaje<textarea id="cm" rows="4"></textarea></label>
-<a class="btn" id="cs" target="_blank" rel="noopener" href="#">Enviar por WhatsApp</a>
-</div>
+<section id="contacto" style="background:var(--calido)">
+ <div class="wrap contact">
+  <div>
+   <h2>Contacto y ubicación</h2>
+   <dl>
+    <div><dt>Dirección</dt><dd id="cAddr"></dd></div>
+    <div><dt>Horario</dt><dd id="cHours"></dd></div>
+    <div><dt>WhatsApp</dt><dd id="cPhone"></dd></div>
+   </dl>
+   <p style="margin-top:1.2rem"><a class="btn sec sm" id="mapLink" href="#" target="_blank" rel="noopener">Ver en Google Maps</a></p>
+  </div>
+  <form id="msgForm">
+   <h3 style="margin-bottom:1rem">Envíanos un mensaje</h3>
+   <label>Nombre<input id="mName" autocomplete="name" required></label>
+   <label>Mensaje<textarea id="mText" rows="4" required></textarea></label>
+   <button class="btn" type="submit">Enviar por WhatsApp</button>
+  </form>
+ </div>
 </section>
+</main>
 
-<footer>© <span id="yr"></span> Orquídea Boutique. Todos los derechos reservados.</footer>
+<footer>
+ <div class="wrap">
+  <div><strong style="color:#fff;font-family:'Bodoni Moda',serif;font-size:1.2rem">✿ Orquídea Boutique</strong><p>Sitio de demostración: los productos y precios son de ejemplo.</p></div>
+  <nav aria-label="Pie"><a href="#inicio">Inicio</a><a href="#coleccion">Colección</a><a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a></nav>
+  <p>© <span id="year"></span> Orquídea Boutique</p>
+ </div>
+</footer>
 
-<div class="ov" id="ov"></div>
+<dialog id="dlg" aria-labelledby="dTitle"><div class="pd" id="pd"></div></dialog>
+<div id="ov"></div>
 <aside id="cart" aria-label="Carrito de compras" aria-hidden="true">
-<div class="ch"><h2 style="margin:0;font-size:1.6rem">Tu carrito</h2><button class="x" id="close">Cerrar</button></div>
-<div id="lines"></div>
-<div class="total"><span>Total</span><span id="total">bs0.00</span></div>
-<div class="form" id="form">
-<div class="modes">
-<label><input type="radio" name="mode" value="comprar" checked>Comprar</label>
-<label><input type="radio" name="mode" value="reservar">Reservar</label>
-</div>
-<label>Nombre<input id="fn" autocomplete="name"></label>
-<label>Teléfono<input id="fp" type="tel" autocomplete="tel"></label>
-<label id="rd" hidden>Fecha para recoger en tienda<input id="fd" type="date"></label>
-<label>Notas (opcional)<textarea id="fnote" rows="2"></textarea></label>
-<div class="err" id="err" role="alert"></div>
-<button class="btn" id="send">Enviar pedido por WhatsApp</button>
-</div>
-<div class="done" id="done" hidden></div>
+ <div class="ch"><h2 style="font-size:1.4rem;margin:0">Tu carrito</h2><button class="iconbtn" id="closeCart">Cerrar</button></div>
+ <div class="cb" id="cartBody"></div>
+ <div class="cf" id="cartFoot"></div>
 </aside>
-<div class="toast" id="toast" role="status"></div>
+<div id="toast" role="status"></div>
 
 <script>
-var CUR='$',WA='59175455562';
-var $=function(s){return document.querySelector(s)};
-var money=function(n){return CUR+n.toFixed(2)};
-var SH={dress:'<path d="M40 10h20l-4 20 16 60H28l16-60z"/>',top:'<path d="M30 20l12-8q8 8 16 0l12 8 10 18-12 4-2 43H34l-2-43-12-4z"/>',pants:'<path d="M32 10h36l4 80H54L50 42l-4 48H28z"/>',bag:'<path d="M35 40V30a15 15 0 0 1 30 0v10" fill="none" stroke-width="5"/><rect x="20" y="40" width="60" height="46" rx="8"/>',necklace:'<path d="M22 18q28 68 56 0" fill="none" stroke-width="4"/><circle cx="50" cy="62" r="9"/>',earrings:'<circle cx="34" cy="28" r="5"/><circle cx="66" cy="28" r="5"/><path d="M34 38c10 10 10 26 0 26s-10-16 0-26zM66 38c10 10 10 26 0 26s-10-16 0-26z"/>'};
-var art=function(t,c){return '<svg viewBox="0 0 100 100" fill="'+c+'" stroke="'+c+'" aria-hidden="true">'+SH[t]+'</svg>'};
-var P=[
-{id:1,cat:'Ropa',t:'dress',n:'Vestido floral primavera',p:45,d:'Vestido ligero con vuelo, cómodo para el día a día.',c:[['Rosa','#e0679f'],['Azul','#5b8bd6'],['Verde','#4fae85']],s:1},
-{id:2,cat:'Ropa',t:'top',n:'Blusa satinada',p:28,d:'Blusa suave de manga corta, combina con todo.',c:[['Lila','#9a7bd0'],['Blanco','#e9e2ee'],['Negro','#3a2c45']],s:1},
-{id:3,cat:'Ropa',t:'pants',n:'Pantalón palazzo',p:38,d:'Pantalón ancho de tiro alto, fresco y elegante.',c:[['Beige','#c9a27a'],['Negro','#3a2c45'],['Vino','#8e2848']],s:1},
-{id:4,cat:'Ropa',t:'dress',n:'Vestido midi elegante',p:62,d:'Corte midi para eventos y ocasiones especiales.',c:[['Vino','#8e2848'],['Esmeralda','#1f8a6a'],['Negro','#3a2c45']],s:1},
-{id:5,cat:'Accesorios',t:'bag',n:'Bolso bandolera',p:34,d:'Bolso mediano con correa ajustable y cierre.',c:[['Camel','#b98450'],['Negro','#3a2c45'],['Rosa','#e0679f']]},
-{id:6,cat:'Accesorios',t:'necklace',n:'Collar de perlas doradas',p:18,d:'Collar delicado con dije, baño dorado.',c:[['Dorado','#d4a73a'],['Plateado','#9aa3b0']]},
-{id:7,cat:'Accesorios',t:'earrings',n:'Aretes gota',p:12,d:'Aretes livianos, ideales para uso diario.',c:[['Dorado','#d4a73a'],['Plateado','#9aa3b0'],['Rosa','#e0679f']]},
-{id:8,cat:'Accesorios',t:'bag',n:'Cartera de mano',p:26,d:'Cartera pequeña para salidas y fiestas.',c:[['Negro','#3a2c45'],['Lila','#9a7bd0'],['Dorado','#d4a73a']]}
-];
-var sel={},filter='Todo',cart=[];
-P.forEach(function(p){sel[p.id]={ci:0,sz:'M'}});
-try{cart=JSON.parse(localStorage.getItem('ob_cart')||'[]')}catch(e){cart=[]}
-var save=function(){try{localStorage.setItem('ob_cart',JSON.stringify(cart))}catch(e){}};
-var byId=function(id){return P.filter(function(p){return p.id===id})[0]};
-
-$('#mosaic').innerHTML=[[0,0],[1,1],[3,2],[4,0]].map(function(a){var p=P[a[0]];return '<div class="pic" style="--c:'+p.c[a[1]][1]+'">'+art(p.t,p.c[a[1]][1])+'</div>'}).join('');
-
-function draw(){
- $('#grid').innerHTML=P.filter(function(p){return filter==='Todo'||p.cat===filter}).map(function(p){
-  var s=sel[p.id],col=p.c[s.ci];
-  return '<article class="card" data-id="'+p.id+'"><div class="pic" style="--c:'+col[1]+'">'+art(p.t,col[1])+'</div><div class="body"><h3>'+p.n+'</h3><p class="d">'+p.d+'</p>'+
-  '<div class="opt"><span>Color: <b>'+col[0]+'</b></span><div class="sw">'+p.c.map(function(c,i){return '<button data-ci="'+i+'" class="'+(i===s.ci?'on':'')+'" style="background:'+c[1]+'" aria-label="'+c[0]+'"></button>'}).join('')+'</div></div>'+
-  (p.s?'<div class="opt"><span>Talla</span><select aria-label="Talla">'+['S','M','L','XL'].map(function(z){return '<option'+(z===s.sz?' selected':'')+'>'+z+'</option>'}).join('')+'</select></div>':'')+
-  '<div class="price">'+money(p.p)+'</div><div class="btns"><button class="btn ghost" data-a="add">Agregar al carrito</button><button class="btn" data-a="buy">Comprar ya</button></div></div></article>';
- }).join('');
-}
-$('#chips').onclick=function(e){var b=e.target.closest('.chip');if(!b)return;filter=b.dataset.f;document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c===b)});draw()};
-$('#grid').onclick=function(e){
- var b=e.target.closest('button');if(!b)return;var id=+b.closest('.card').dataset.id;
- if(b.dataset.ci!==undefined){sel[id].ci=+b.dataset.ci;draw();return}
- if(b.dataset.a){add(id);if(b.dataset.a==='buy')openCart()}
-};
-$('#grid').onchange=function(e){if(e.target.tagName==='SELECT')sel[+e.target.closest('.card').dataset.id].sz=e.target.value};
-
-function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(function(){el.classList.remove('on')},1600)}
-function add(id){
- var p=byId(id),s=sel[id],sz=p.s?s.sz:'',k=id+'|'+s.ci+'|'+sz;
- var it=cart.filter(function(i){return i.k===k})[0];
- if(it)it.q++;else cart.push({k:k,id:id,ci:s.ci,sz:sz,q:1});
- save();renderCart();$('#done').hidden=true;$('#form').hidden=false;toast('Agregado al carrito');
-}
-function sum(){return cart.reduce(function(t,i){return t+byId(i.id).p*i.q},0)}
-function renderCart(){
- $('#count').textContent=cart.reduce(function(t,i){return t+i.q},0);
- $('#lines').innerHTML=cart.length?cart.map(function(i){
-  var p=byId(i.id),c=p.c[i.ci];
-  return '<div class="line"><div class="pic" style="--c:'+c[1]+'">'+art(p.t,c[1])+'</div><div><b>'+p.n+'</b><br><span class="d">'+c[0]+(i.sz?' · Talla '+i.sz:'')+' · '+money(p.p)+'</span><div class="qty"><button data-k="'+i.k+'" data-d="-1" aria-label="Quitar uno">−</button>'+i.q+'<button data-k="'+i.k+'" data-d="1" aria-label="Agregar uno">+</button> <button class="x" data-k="'+i.k+'" data-d="0">Eliminar</button></div></div><b>'+money(p.p*i.q)+'</b></div>';
- }).join(''):'<p class="d" style="padding:18px 0">Tu carrito está vacío. Agrega artículos desde la sección de productos.</p>';
- $('#total').textContent=money(sum());
- $('#send').disabled=!cart.length;
-}
-$('#lines').onclick=function(e){
- var b=e.target.closest('button');if(!b)return;var it=cart.filter(function(i){return i.k===b.dataset.k})[0];if(!it)return;
- var d=+b.dataset.d;if(d===0)it.q=0;else it.q+=d;
- cart=cart.filter(function(i){return i.q>0});save();renderCart();
-};
-function openCart(){$('#cart').classList.add('open');$('#ov').classList.add('open');$('#cart').setAttribute('aria-hidden','false')}
-function closeCart(){$('#cart').classList.remove('open');$('#ov').classList.remove('open');$('#cart').setAttribute('aria-hidden','true')}
-$('#open').onclick=openCart;$('#close').onclick=closeCart;$('#ov').onclick=closeCart;
-document.onkeydown=function(e){if(e.key==='Escape')closeCart()};
-
-var mode=function(){return document.querySelector('input[name=mode]:checked').value};
-document.querySelectorAll('input[name=mode]').forEach(function(r){r.onchange=function(){$('#rd').hidden=mode()!=='reservar'}});
-$('#fd').min=new Date().toISOString().slice(0,10);
-
-$('#send').onclick=function(){
- var n=$('#fn').value.trim(),ph=$('#fp').value.trim(),m=mode(),dt=$('#fd').value;
- if(!n||!ph){$('#err').textContent='Escribe tu nombre y tu teléfono.';return}
- if(m==='reservar'&&!dt){$('#err').textContent='Elige la fecha en que pasarás por la tienda.';return}
- $('#err').textContent='';
- var msg='Hola, soy '+n+' ('+ph+'). Quiero '+(m==='reservar'?'reservar':'comprar')+':\n'+cart.map(function(i){var p=byId(i.id);return '- '+i.q+' x '+p.n+' ('+p.c[i.ci][0]+(i.sz?', '+i.sz:'')+') '+money(p.p*i.q)}).join('\n')+'\nTotal: '+money(sum())+(m==='reservar'?'\nRecojo en tienda: '+dt:'')+($('#fnote').value.trim()?'\nNotas: '+$('#fnote').value.trim():'');
- var done=$('#done');done.textContent='';
- var h=document.createElement('p');h.innerHTML='<b>Tu pedido está listo.</b> Envíalo por WhatsApp para confirmarlo:<br><br>';
- var pre=document.createElement('div');pre.textContent=msg;
- var a=document.createElement('a');a.className='btn';a.target='_blank';a.rel='noopener';a.style.marginTop='12px';a.textContent='Abrir WhatsApp';a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
- done.append(h,pre,a);done.hidden=false;$('#form').hidden=true;
-};
-
-function wa(){$('#cs').href='https://wa.me/'+WA+'?text='+encodeURIComponent('Hola, soy '+($('#cn').value||'')+'. '+($('#cm').value||''))}
-$('#cn').oninput=wa;$('#cm').oninput=wa;wa();
-$('#yr').textContent=new Date().getFullYear();
-draw();renderCart();
+/* ===== CONFIGURACIÓN: edita aquí tus datos ===== */
+const CFG={tienda:'Orquídea Boutique',wa:'59175455562',telefono:'+591 754 555 62',direccion:'Calle 27 de mayo, Cochabamba',horario:'Lunes a sábado, 10:00 a 20:00',mapa:'Calle 27 de mayo, Cochabamba, Bolivia',moneda:'Bs',maxQty:10};
+const FAQ=[
+['¿Cómo hago un pedido?','Añade productos al carrito, completa tu nombre y pulsa «Enviar pedido por WhatsApp». Te responderemos para coordinar los detalles.'],
+['¿Cómo consulto las tallas?','Escríbenos por WhatsApp con tus medidas y te orientamos. (Texto editable.)'],
+['¿Cómo verifico la disponibilidad?','Consúltanos por WhatsApp antes de confirmar tu compra.'],
+['¿Qué métodos de entrega hay?','Por definir. Consúltanos por WhatsApp y te indicamos las opciones disponibles.'],
+['¿Cómo contacto con la tienda?','Por WhatsApp, o visitándonos en nuestra dirección en el horario indicado.']];
+const COL={Rosa:'#e8b4c8',Crema:'#efe3cf',Negro:'#3a3438',Lila:'#b99ad0',Verde:'#9cb89a',Dorado:'#d8b45a',Plata:'#c4c4cc',Perla:'#f3eee6'};
+const T=['S','M','L','XL'];
+const P=[
+{id:1,n:'Vestido floral',c:'ropa',p:240,tag:'Nuevo',k:'v',t:T,col:['Rosa','Crema','Lila'],d:'Vestido ligero con caída suave, para el día o la tarde.'},
+{id:2,n:'Blusa de lino',c:'ropa',p:130,tag:'',k:'b',t:T,col:['Crema','Verde','Rosa'],d:'Blusa fresca de corte holgado, fácil de combinar.'},
+{id:3,n:'Pantalón recto',c:'ropa',p:190,tag:'Destacado',k:'p',t:T,col:['Negro','Crema'],d:'Pantalón de talle alto y pierna recta.'},
+{id:4,n:'Falda midi',c:'ropa',p:150,tag:'',k:'f',t:T,col:['Lila','Negro','Verde'],d:'Falda midi con vuelo cómodo para caminar.'},
+{id:5,n:'Chaqueta ligera',c:'ropa',p:260,tag:'Destacado',k:'j',t:T,col:['Crema','Negro'],d:'Chaqueta liviana para media estación.'},
+{id:6,n:'Top básico',c:'ropa',p:80,tag:'Nuevo',k:'b',t:T,col:['Negro','Perla','Rosa'],d:'Top simple que combina con todo.'},
+{id:7,n:'Bolso pequeño',c:'accesorios',p:170,tag:'Destacado',k:'g',t:[],col:['Negro','Crema','Rosa'],d:'Bolso compacto con correa ajustable.'},
+{id:8,n:'Collar dorado',c:'accesorios',p:70,tag:'',k:'o',t:[],col:['Dorado','Plata'],d:'Collar fino para uso diario.'},
+{id:9,n:'Aretes de perla',c:'accesorios',p:60,tag:'Nuevo',k:'o',t:[],col:['Perla','Dorado'],d:'Aretes pequeños y delicados.'},
+{id:10,n:'Cinturón fino',c:'accesorios',p:55,tag:'',k:'o',t:[],col:['Negro','Dorado'],d:'Cinturón fino que marca la cintura.'},
+{id:11,n:'Pañuelo estampado',c:'accesorios',p:45,tag:'',k:'o',t:[],col:['Rosa','Lila','Verde'],d:'Pañuelo versátil para cuello, cabello o bolso.'}];
+const CATS=[['todo','Todo','Ver colección completa'],['ropa','Ropa','Vestidos, blusas y más'],['accesorios','Accesorios','Bolsos y joyería'],['nuevo','Novedades','Lo último en llegar'],['destacado','Destacados','Nuestras elecciones']];
+const SHAPE={v:'M70 40h60l10 50-20 90H80L60 90z',b:'M60 50l25-10h30l25 10 15 40-25 8-5 70H75l-5-70-25-8z',p:'M70 40h60l12 140h-30l-12-90-12 90H58z',f:'M75 50h50l30 130H45z',j:'M55 55l30-12h30l30 12 12 55-25 5-5 55H73l-5-55-25-5z',g:'M60 90h80l10 80H50z M80 90a20 20 0 0140 0',o:'M100 60a40 40 0 100 80 40 40 0 000-80zm0 18a22 22 0 110 44 22 22 0 010-44z'};
+const $=s=>document.querySelector(s);
+const money=n=>CFG.moneda+' '+n.toFixed(2);
+function art(p,hex){const bg=hex||COL[p.col[0]];return `<svg viewBox="0 0 200 200" role="img" aria-label="${p.n}"><rect width="200" height="200" fill="#f1e7dc"/><path d="${SHAPE[p.k]}" fill="${bg}" stroke="#2a2528" stroke-opacity=".25" stroke-width="2"/></svg>`}
+/* ===== Estado ===== */
+let F={q:'',cat:'todo',sort:''},cart=[];
+const KEY='orquidea-carrito';
+function load(){try{const a=JSON.parse(localStorage.getItem(KEY));if(Array.isArray(a))cart=a.filter(i=>P.some(p=>p.id===i.id)&&Number.isInteger(i.qty)&&i.qty>0&&i.qty<=CFG.maxQty)}catch(e){cart=[]}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(cart))}catch(e){}}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),2200)}
+function wa(text){return `https://wa.me/${CFG.wa}?text=${encodeURIComponent(text)}`}
+/* ===== Catálogo ===== */
+function list(){let r=P.filter(p=>{const q=F.q.trim().toLowerCase();if(q&&!p.n.toLowerCase().includes(q))return false;if(F.cat==='nuevo')return p.tag==='Nuevo';if(F.cat==='destacado')return p.tag==='Destacado';return F.cat==='todo'||p.c===F.cat});
+ if(F.sort)r=[...r].sort((a,b)=>F.sort==='asc'?a.p-b.p:b.p-a.p);return r}
+function renderChips(){$('#chips').innerHTML=CATS.map(([k,l])=>`<button class="chip" data-c="${k}" aria-pressed="${F.cat===k}">${l}</button>`).join('')}
+function renderGrid(){const r=list();$('#live').textContent=r.length+' productos encontrados';
+ $('#grid').innerHTML=r.length?r.map(p=>`<article class="card"><button class="pic" data-open="${p.id}" aria-label="Ver detalles de ${p.n}">${art(p)}${p.tag?`<span class="tag">${p.tag}</span>`:''}</button><div class="info"><h3>${p.n}</h3><span class="cat-l">${p.c==='ropa'?'Ropa':'Accesorios'}</span><span class="price">${money(p.p)}</span><div class="row"><button class="btn sm" data-open="${p.id}">Elegir y añadir</button></div></div></article>`).join(''):`<div class="empty"><p>No encontramos productos con esos filtros.</p><p style="margin-top:.8rem"><button class="btn sm" data-reset>Limpiar filtros</button></p></div>`}
+function setCat(c){F.cat=c;renderChips();renderGrid()}
+/* ===== Detalle ===== */
+let sel={};
+function openProduct(id){const p=P.find(x=>x.id===id);sel={p,t:p.t[0]||'',c:p.col[0],q:1};drawDetail();$('#dlg').showModal()}
+function drawDetail(){const{p}=sel;$('#pd').innerHTML=`${art(p,COL[sel.c])}<div class="body"><button class="iconbtn x" data-close>Cerrar</button><h2 id="dTitle" style="font-size:1.8rem">${p.n}</h2><div class="price" style="font-size:1.2rem">${money(p.p)}</div><p style="color:var(--gris)">${p.d}</p>
+${p.t.length?`<div><strong>Talla</strong><div class="opts" style="margin-top:.4rem">${p.t.map(t=>`<button class="opt" data-t="${t}" aria-pressed="${sel.t===t}">${t}</button>`).join('')}</div></div>`:''}
+<div><strong>Color</strong><div class="opts" style="margin-top:.4rem">${p.col.map(c=>`<button class="opt" data-col="${c}" aria-pressed="${sel.c===c}">${c}</button>`).join('')}</div></div>
+<div class="qty"><strong>Cantidad</strong><button data-dq="-1" aria-label="Menos">−</button><span aria-live="polite">${sel.q}</span><button data-dq="1" aria-label="Más">+</button></div>
+<div class="cta"><button class="btn" data-add>Añadir al carrito</button><a class="btn sec" target="_blank" rel="noopener" href="${wa(`Hola, quiero consultar por: ${p.n}${sel.t?' (talla '+sel.t+')':''}, color ${sel.c}.`)}">Consultar por WhatsApp</a></div></div>`}
+/* ===== Carrito ===== */
+function addItem(p,t,c,q){const it=cart.find(i=>i.id===p.id&&i.t===t&&i.c===c);if(it)it.qty=Math.min(CFG.maxQty,it.qty+q);else cart.push({id:p.id,t,c,qty:Math.min(CFG.maxQty,q)});save();renderCart();toast(p.n+' añadido al carrito')}
+const total=()=>cart.reduce((s,i)=>s+P.find(p=>p.id===i.id).p*i.qty,0);
+function renderCart(){const keep={n:$('#nom')?.value||'',t:$('#notas')?.value||'',m:$('#mode')?.value||'comprar',f:$('#fecha')?.value||''};$('#count').textContent=cart.reduce((s,i)=>s+i.qty,0);
+ $('#cartBody').innerHTML=cart.length?cart.map((i,x)=>{const p=P.find(p=>p.id===i.id);return `<div class="ci">${art(p,COL[i.c])}<div><strong>${p.n}</strong><br><small>${i.t?'Talla '+i.t+' · ':''}${i.c} · ${money(p.p)}</small><div class="qty" style="margin-top:.3rem"><button data-cq="${x}" data-d="-1" aria-label="Menos">−</button><span>${i.qty}</span><button data-cq="${x}" data-d="1" aria-label="Más">+</button></div></div><div style="text-align:right"><strong>${money(p.p*i.qty)}</strong><br><button class="rm" data-rm="${x}">Quitar</button></div></div>`}).join(''):'<p style="color:var(--gris)">Tu carrito está vacío. Explora la colección y añade tus favoritos.</p>';
+ $('#cartFoot').innerHTML=cart.length?`<div class="tot"><span>Total</span><span>${money(total())}</span></div>
+ <label>Tipo de pedido<select id="mode"><option value="comprar">Comprar</option><option value="reservar">Reservar para recoger</option></select></label>
+ <label id="dateL" hidden>Fecha en que pasarás<input type="date" id="fecha"></label>
+ <label>Nombre<input id="nom" autocomplete="name" placeholder="Tu nombre"></label>
+ <label>Notas (opcional)<textarea id="notas" rows="2"></textarea></label>
+ <p id="err" role="alert" style="color:#a02b2b;font-size:.9rem;margin-bottom:.5rem"></p>
+ <button class="btn" style="width:100%" data-send>Enviar pedido por WhatsApp</button>
+ <p style="text-align:center;margin-top:.6rem"><button class="rm" data-empty>Vaciar carrito</button></p>`:'';
+ if(cart.length){$('#nom').value=keep.n;$('#notas').value=keep.t;$('#mode').value=keep.m;$('#fecha').value=keep.f;$('#dateL').hidden=keep.m!=='reservar'}}
+function openCart(o){$('#cart').classList.toggle('on',o);$('#ov').classList.toggle('on',o);$('#cart').setAttribute('aria-hidden',!o);if(o)$('#closeCart').focus();else $('#openCart').focus()}
+function send(){if(!cart.length){return}const nom=$('#nom').value.trim(),mode=$('#mode').value,f=$('#fecha').value,err=$('#err');
+ if(!nom){err.textContent='Escribe tu nombre para preparar el pedido.';$('#nom').focus();return}
+ if(mode==='reservar'&&(!f||f<new Date().toLocaleDateString('en-CA'))){err.textContent='Indica una fecha válida (hoy o posterior) para pasar por la tienda.';return}
+ const lines=cart.map(i=>{const p=P.find(p=>p.id===i.id);return `• ${i.qty} x ${p.n} (${i.t?'talla '+i.t+', ':''}${i.c}) - ${money(p.p*i.qty)}`});
+ const nt=$('#notas').value.trim();
+ const msg=`Hola, soy ${nom}. Quiero ${mode==='reservar'?'reservar':'comprar'} en ${CFG.tienda}:\n${lines.join('\n')}\nTotal: ${money(total())}${mode==='reservar'?'\nPasaré el: '+f:''}${nt?'\nNotas: '+nt:''}`;
+ window.open(wa(msg),'_blank','noopener')}
+/* ===== Eventos ===== */
+document.addEventListener('click',e=>{const t=e.target.closest('button,a');if(!t)return;const d=t.dataset;
+ if(d.c)setCat(d.c);
+ if(d.cat){setCat(d.cat);location.hash='coleccion'}
+ if('reset' in d)$('#clear').click();
+ if(d.open)openProduct(+d.open);
+ if('close' in d)$('#dlg').close();
+ if(d.t){sel.t=d.t;drawDetail()}
+ if(d.col){sel.c=d.col;drawDetail()}
+ if(d.dq){sel.q=Math.min(CFG.maxQty,Math.max(1,sel.q+ +d.dq));drawDetail()}
+ if('add' in d){addItem(sel.p,sel.t,sel.c,sel.q);$('#dlg').close()}
+ if(d.cq){const i=cart[+d.cq];i.qty+=+d.d;if(i.qty<1)i.qty=1;if(i.qty>CFG.maxQty)i.qty=CFG.maxQty;save();renderCart()}
+ if(d.rm){cart.splice(+d.rm,1);save();renderCart()}
+ if('empty' in d&&confirm('¿Vaciar el carrito?')){cart=[];save();renderCart()}
+ if('send' in d)send();
+ if(t.id==='openCart')openCart(true);
+ if(t.id==='closeCart')openCart(false);
+ if(t.matches('.menu a'))closeMenu()});
+document.addEventListener('change',e=>{if(e.target.id==='mode')$('#dateL').hidden=e.target.value!=='reservar'});
+$('#ov').onclick=()=>openCart(false);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#cart').classList.contains('on'))openCart(false)});
+$('#dlg').addEventListener('click',e=>{if(e.target===$('#dlg'))$('#dlg').close()});
+$('#q').oninput=e=>{F.q=e.target.value;renderGrid()};
+$('#sort').onchange=e=>{F.sort=e.target.value;renderGrid()};
+$('#clear').onclick=()=>{F={q:'',cat:'todo',sort:''};$('#q').value='';$('#sort').value='';renderChips();renderGrid()};
+function closeMenu(){$('#menu').classList.remove('open');$('#burger').setAttribute('aria-expanded',false)}
+$('#burger').onclick=()=>{const o=$('#menu').classList.toggle('open');$('#burger').setAttribute('aria-expanded',o)};
+$('#msgForm').onsubmit=e=>{e.preventDefault();window.open(wa(`Hola, soy ${$('#mName').value.trim()}. ${$('#mText').value.trim()}`),'_blank','noopener')};
+/* ===== Inicio ===== */
+$('#cats').innerHTML=CATS.slice(1).map(([k,l,s])=>`<button class="cat" data-cat="${k}"><strong>${l}</strong><span>${s}</span></button>`).join('');
+$('#faq').innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
+$('#waHero').href=wa('Hola, quisiera consultar por la colección de '+CFG.tienda+'.');
+$('#cAddr').textContent=CFG.direccion;$('#cHours').textContent=CFG.horario;$('#cPhone').textContent=CFG.telefono;
+$('#mapLink').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(CFG.mapa);
+$('#year').textContent=new Date().getFullYear();
+load();renderChips();renderGrid();renderCart();
 </script>
 </body>
 </html>
